@@ -1,0 +1,42 @@
+body{
+    background-color: pink;
+}
+
+@media (min-width: 992px) {
+    /* Clearfix to contain floated elements */
+    .container {
+        color:antiquewhite;
+        border: 8px solid #000;
+        width: 33.33%;
+        /* Each section takes up one-third of the container */
+        box-sizing: border-box;
+        float: left;
+        /* Float each section left */
+        padding: 20px; /* Add padding as needed */
+        display: table;
+        background-color: rgb(182, 25, 51);
+    }
+}
+@media (min-width: 768px) and (max-width: 991px) {
+    /* Style for the first two sections in the first row */
+    .container {
+      color:antiquewhite;
+      border: 8px solid #000;
+      width: 48%; 
+      float: left;
+      margin-right: 2%; 
+      display:flex;
+    }
+    .container:nth-child(3) {
+      width: 100%;
+      float: left;
+      margin-right: 0; 
+    }
+  }
+  @media (max-width: 767px) {
+    /* Reset the width and allow sections to take up the entire row */
+    .container {
+      width: 100%;
+      margin: 0; 
+    }
+  }
